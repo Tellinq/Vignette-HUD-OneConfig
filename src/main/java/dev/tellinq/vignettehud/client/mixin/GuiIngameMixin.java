@@ -9,25 +9,18 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(GuiIngame.class)
 public class GuiIngameMixin {
-    //#if MC > 1.12.2
-    //$$ @ModifyArg(
-    //$$         method = "updateVignetteDarkness",
-    //$$         at = @At(
-    //$$                 value = "INVOKE",
-    //$$                 target = "Lnet/minecraft/util/math/MathHelper;clamp(FFF)F"
-    //$$         ),
-    //$$         index = 0
-    //$$ )
-    //#else
-    @ModifyVariable(
+    @ModifyArg(
+            //#if MC > 1.12.2
+            //$$ method = "updateVignetteDarkness",
+            //#else
             method = "renderVignette",
+            //#endif
             at = @At(
-                    value = "STORE",
-                    ordinal = 0
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/util/MathHelper;clamp_float(FFF)F"
             ),
-            name = "lightLevel"
+            index = 0
     )
-    //#endif
     private float overrideLightLevel(float original) {
         return original * VignetteHUDConfig.darknessMultiplier;
     }
