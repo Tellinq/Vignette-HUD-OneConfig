@@ -1,16 +1,13 @@
-# OneConfigExampleMod
+# Vignette HUD
 
-![Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_1.svg)
-![Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_2.svg)
-![Minimal Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_3.svg)
-![Minimal Compact Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_4.svg)
+![Powered by OneConfig](https://polyfrost.org/media/branding/badges/badge_3.svg)
 
-Example mod implementing OneConfig.
+Change the Vignette Opacity based on the lighting level, or force a specific opacity of your choosing!
 
-## How to use
+## Looking for ideas and contributors!
 
-- Copy the template either by using GitHub's "Use this template" feature or downloading the repo manually.
-- **Remove the license named "LICENSE-TEMPLATE" and choose a new one.**
-- Refactor the template (specifically, the modid, version and name in the gradle.properties and most of the class names)
-  to a different name.
-- Have fun modding! :D
+- Please feel free to submit issues specific towards what could be improved with the mod. Specifically looking for types of options or conditions.
+
+## This is in work in progress!
+
+Currently aiming to support all versions that OneConfig will support. Please see the issues tab to see what versions are left for testing

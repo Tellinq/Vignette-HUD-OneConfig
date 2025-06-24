@@ -1,13 +1,13 @@
 {
   "compatibilityLevel": "${java_version}",
   "minVersion": "0.8",
-  "package": "org.polyfrost.example.client.mixin",
+  "package": "dev.tellinq.vignettehud.client.mixin",
   "refmap": "mixins.${mod_id}.refmap.json",
   "injectors": {
     "maxShiftBy": 5
   },
   "client": [
-    "MixinMinecraft_Example"
+    "GuiIngameMixin"
   ],
   "verbose": true
 }

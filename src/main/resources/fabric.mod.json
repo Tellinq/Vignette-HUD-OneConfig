@@ -7,21 +7,21 @@
     "authors": [
         "Your Name"
     ],
-    "environment": "*",
+    "environment": "client",
     "entrypoints": {
         "main": [
             {
-                "value": "org.polyfrost.example.ExampleEntrypoint"
+                "value": "dev.tellinq.vignettehud.VignetteHUDEntrypoint"
             }
         ],
         "client": [
             {
-                "value": "org.polyfrost.example.ExampleEntrypoint"
+                "value": "dev.tellinq.vignettehud.VignetteHUDEntrypoint"
             }
         ],
         "server": [
             {
-                "value": "org.polyfrost.example.ExampleEntrypoint"
+                "value": "dev.tellinq.vignettehud.VignetteHUDEntrypoint"
             }
         ]
     },

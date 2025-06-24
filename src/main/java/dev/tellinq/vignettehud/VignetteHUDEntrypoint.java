@@ -1,4 +1,4 @@
-package org.polyfrost.example;
+package dev.tellinq.vignettehud;
 
 //#if FABRIC
 //$$ import net.fabricmc.api.ModInitializer;
@@ -24,31 +24,29 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 //$$ import net.neoforged.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 //#endif
 
-import org.polyfrost.example.Example;
-import org.polyfrost.example.client.ExampleClient;
-import org.polyfrost.example.server.ExampleServer;
+import dev.tellinq.vignettehud.client.VignetteHUD;
 
 //#if FORGE-LIKE
-//$$ import org.polyfrost.example.ExampleConstants;
+//$$ import dev.tellinq.vignettehud.VignetteHUDConstants;
 //$$
 //#if MC >= 1.16.5
-//$$ @Mod(ExampleConstants.ID)
+//$$ @Mod(VignetteHUDConstants.ID)
 //#else
-@Mod(modid = ExampleConstants.ID, version = ExampleConstants.VERSION)
+@Mod(modid = VignetteHUDConstants.ID, version = VignetteHUDConstants.VERSION)
 //#endif
 //#endif
-public class ExampleEntrypoint
+public class VignetteHUDEntrypoint
     //#if FABRIC
     //$$ implements ModInitializer, ClientModInitializer, DedicatedServerModInitializer
     //#endif
 {
 
     //#if FORGE && MC >= 1.16.5
-    //$$ public ExampleEntrypoint() {
+    //$$ public VignetteHUDEntrypoint() {
     //$$     setupForgeEvents(FMLJavaModLoadingContext.get().getModEventBus());
     //$$ }
     //#elseif NEOFORGE
-    //$$ public ExampleEntrypoint(IEventBus modEventBus) {
+    //$$ public VignetteHUDEntrypoint(IEventBus modEventBus) {
     //$$     setupForgeEvents(modEventBus);
     //$$ }
     //#endif
@@ -67,7 +65,7 @@ public class ExampleEntrypoint
             //#endif
             //#endif
     ) {
-        Example.INSTANCE.initialize();
+        // no code needed here
     }
 
     //#if FABRIC
@@ -96,7 +94,7 @@ public class ExampleEntrypoint
         //$$ }
         //#endif
 
-        ExampleClient.INSTANCE.initialize();
+        VignetteHUD.INSTANCE.initialize();
     }
 
     //#if FABRIC
@@ -125,7 +123,7 @@ public class ExampleEntrypoint
         //$$ }
         //#endif
 
-        ExampleServer.INSTANCE.initialize();
+        // no code here needed
     }
 
     //#if FORGE-LIKE && MC >= 1.16.5
