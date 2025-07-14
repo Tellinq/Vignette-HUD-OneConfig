@@ -7,7 +7,7 @@
     "maxShiftBy": 5
   },
   "client": [
-    "GuiIngameMixin"
+    "Mixin_GuiIngame_VignetteOpacity"
   ],
   "verbose": true
 }

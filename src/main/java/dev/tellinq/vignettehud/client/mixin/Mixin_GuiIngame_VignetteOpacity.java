@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(GuiIngame.class)
-public class GuiIngameMixin {
+public class Mixin_GuiIngame_VignetteOpacity {
     @ModifyArg(
             //#if MC > 1.12.2
             //$$ method = "updateVignetteDarkness",
@@ -20,7 +20,7 @@ public class GuiIngameMixin {
             ),
             index = 0
     )
-    private float overrideLightLevel(float original) {
+    private float vignetteHud$overrideLightLevel(float original) {
         return original * VignetteHUDConfig.darknessMultiplier;
     }
 
@@ -36,7 +36,7 @@ public class GuiIngameMixin {
             ),
             index = 1
     )
-    private float modifyClampMin(float min) {
+    private float vignetteHud$modifyClampMin(float min) {
         return (VignetteHUDConfig.vignetteType == 1 ? VignetteHUDConfig.staticOpacity : VignetteHUDConfig.minimumOpacity) / 100f;
     }
 
@@ -52,7 +52,7 @@ public class GuiIngameMixin {
             ),
             index = 2
     )
-    private float modifyClampMax(float max) {
+    private float vignetteHud$modifyClampMax(float max) {
         return (VignetteHUDConfig.vignetteType == 1 ? VignetteHUDConfig.staticOpacity : VignetteHUDConfig.maximumOpacity) / 100f;
     }
 }
